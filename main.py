@@ -85,6 +85,8 @@ if __name__ == "__main__":
         )
     
     st.title("AI Table Search Ingine")
+    st.write("💡PDF 1: 監督式學習、非監督式學習、強化學習")
+    st.write("💡PDF 2: 動物細胞和植物細胞、多細胞生物和單細胞生物、多細胞生物細胞膜和植物細胞膜")
     st.subheader("Select a PDF file")
     pdf_file = st.selectbox("PDF file", ["docs/1.pdf", "docs/2.pdf"])
     st.subheader("Input a keyword")
