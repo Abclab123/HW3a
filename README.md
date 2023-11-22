@@ -9,6 +9,13 @@ conda install -c conda-forge ghostscript
 pip install -r requirements.txt
 ```
 
+## Usage
+1. Use the command line to run the main.py
+    ```bash
+    streamlit run main.py
+    ```
+2. Go to the url that the command line shows
+
 ## Target
 
 Create an artificial intelligence that searches in which table in the given pdf files has the desired information.  
