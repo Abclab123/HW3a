@@ -16,6 +16,9 @@ pip install -r requirements.txt
     ```
 2. Go to the url that the command line shows
 
+## Flow diagram
+![image](images/flow_diagram.png)
+
 ## Target
 
 Create an artificial intelligence that searches in which table in the given pdf files has the desired information.  
