@@ -4,7 +4,6 @@ import os
 import numpy as np
 from numpy.linalg import norm
 import streamlit as st
-import streamlit.components.v1 as components
 
 
 class pdf2text:
@@ -13,13 +12,29 @@ class pdf2text:
 
     def __call__(self, pdf_file):
         tables = camelot.read_pdf(pdf_file, pages="all")
-        dfs = []
-        texts = []
-        for table in tables:
+        titles = self.get_title(pdf_file)
+        table_infos = []
+
+        for table, title in zip(tables, titles):
             content = table.df.to_string().replace("\\n", "")
-            dfs.append(table.df.replace('\n', '', regex=True))
-            texts.append(content)
-        return dfs, texts
+            table_infos.append({
+                "title": title,
+                "df": table.df.replace('\n', '', regex=True),
+                "text": content
+            })
+        return table_infos
+
+    def get_title(self, pdf_file):
+        tables = camelot.read_pdf(pdf_file, flavor='stream', pages="all")
+        table_titles = []
+
+        for table in tables:
+            text = table.df.to_string().replace("\\n", "").strip().split(' ')
+            for word in text:
+                if "ai_tables" in word:
+                    table_titles.append(word+" "+text[text.index(word)+1])
+
+        return table_titles
 
 
 class text2vector:
@@ -65,30 +80,33 @@ def main(pdf_folder):
             sim_calculator = cosine_sim()
             table_texts = []
             table_dfs = []
+            table_titles = []
             vectors = []
             for file_path in selected_files:
-                dfs, texts = pdf_parser(file_path)
-                for i in range(len(texts)):
-                    embedding = text_transformer(texts[i])
-                    table_texts.append(texts[i])
-                    table_dfs.append(dfs[i])
+                table_infos = pdf_parser(file_path)
+                for i in range(len(table_infos)):
+                    embedding = text_transformer(table_infos[i]['text'])
+                    table_texts.append(table_infos[i]['text'])
+                    table_dfs.append(table_infos[i]['df'])
+                    table_titles.append(table_infos[i]['title'])
                     vectors.append(embedding)
 
             keyword_vector = text_transformer(keyword)
             max_score = 0
             candidate = None
+            candidate_title = None
             for i in range(len(table_texts)):
                 score = sim_calculator(vectors[i], keyword_vector)
                 if score > max_score:
                     max_score = score
                     candidate = table_dfs[i]
-
-            print(candidate)
+                    candidate_title = table_titles[i]
 
         try:
             new_header = candidate.iloc[0]
             candidate = candidate[1:]
             candidate.columns = new_header
+            st.write(candidate_title)
             st.dataframe(candidate, hide_index=True, column_config=None)
         except:
             st.write("No result.")
