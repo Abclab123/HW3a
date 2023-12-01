@@ -9,49 +9,18 @@ conda install -c conda-forge ghostscript
 pip install -r requirements.txt
 ```
 
-## Target
+## Usage
+After previous step **installation**, we can run the app with following command
+`streamlit run main.py`
 
-Create an artificial intelligence that searches in which table in the given pdf files has the desired information.  
+## Steps
+1. Open the browser to access the application (streamlit default run on `8501`)  and you will see the following.
+  ![](assets/1.png)
+2. Upload the pdf that only contains table (one pdf at a time) and the search bar will appear.
+   ![](assets/2.png)
+3. type the input inside search bar, make sure to **pressing enter** and waiting it run, then press the the search button below. if you didn't press enter correctly the result might not be the correct one, simply press the search button again may fix the problem.
+4. if you want to change pdf then press the **x** at the right side of pdf and reupload one.
 
-#### Input
+## Flowchart
+![](assets/flowchart.drawio.png)
 
-1. pdf files with only tables inside
-2. the searching keywords
-
-#### Output
-
-**the hole table with desired information in it**
-
-#### Example
-
-The given pdf file:  
-![image](https://github.com/Stage-A/Document-Intelligence/blob/main/images/example1.png)
-Search query:  
-
-```commandline
-非監督式學習的應用
-```
-
-Output:
-![image](https://github.com/Stage-A/Document-Intelligence/blob/main/images/example2.png)
-
-## How to contribute
-
-* Every one finishes the whole project and pulls the requests , do not edit the main branch
-* if your code is acceptable, we will add it into the main branch
-
-## Note
-
-* In hw3a, you can use any package you think would be helpful.
-* It's also necessary to implement the UI.
-* Also using draw io to draw a flow diagram is required.
-
-## Background Knowledge
-
-[Azure Document Intelligence]( https://azure.microsoft.com/en-us/products/ai-services/ai-document-intelligence
-)
-
-## Test Document
-
-[Document 1](https://docs.google.com/document/d/1Di5oVYhUF6p-zj2y0DEBBeTvhC91KhX8/edit?usp=sharing&ouid=107784913306655694785&rtpof=true&sd=true)
-[Document 2](https://docs.google.com/document/d/1HiZrgIyvwY8Fi4eLS0QGUkkycngtD6XJ/edit?usp=sharing&ouid=107784913306655694785&rtpof=true&sd=true)
