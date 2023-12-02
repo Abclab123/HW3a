@@ -1,4 +1,7 @@
 # Stage-A Document Intelligence
+### Student Info
+Student ID: R12922045
+Name: 陳沛妤
 
 ## Installation
 
@@ -8,6 +11,20 @@ conda activate docint
 conda install -c conda-forge ghostscript
 pip install -r requirements.txt
 ```
+
+## Usage
+
+```bash
+streamlit run main.py
+```
+and then you can see the website by clicking the Network URL in the terminal.
+
+## FlowChart
+![flowchar](./images/flow_diagram.png)
+
+## Demo
+![demo table 1](./images/demo_1.png)
+![demo table 2](./images/demo_2.png)
 
 ## Target
 
