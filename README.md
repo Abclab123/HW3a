@@ -1,4 +1,5 @@
 # Stage-A Document Intelligence
+r11621207 資料學程碩二 郭晉良
 
 ## Installation
 
