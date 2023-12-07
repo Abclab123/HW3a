@@ -3,6 +3,7 @@ from sentence_transformers import SentenceTransformer
 import numpy as np
 import streamlit as st
 import os
+import pandas as pd
 
 
 class pdf2text:
@@ -11,12 +12,21 @@ class pdf2text:
 
     def __call__(self, pdf_file):
         tables = camelot.read_pdf(pdf_file, pages="all")
+	set_table_df = None
+        temp_table_df = None
         
         tables_df = []
         texts = []
         
         for table in tables:
-            temp_table_df = table.df
+            if table.df.index[-1] <= 2:
+                set_table_df = table.df
+            else:
+                if set_table_df is not None:
+                    temp_table_df = pd.concat([set_table_df, table.df], ignore_index=True)
+                    set_table_df = None
+                else:
+                    temp_table_df = table.df
             
             # collect each table
             tables_df.append(temp_table_df)

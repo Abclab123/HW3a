@@ -4,3 +4,4 @@ PyPDF2~=2.0
 sentence-transformers
 streamlit
 numpy
+pandas
