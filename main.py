@@ -80,6 +80,8 @@ if __name__ == "__main__":
         )
     
     st.title("BDS HW3a - 隋中彧")
+    st.write("Table 1 : 監督式學習 vs. 非監督式學習 vs. 強化學習")
+    st.write("Table 2 : 動物細胞 vs. 植物細胞 vs. 多細胞生物 vs. 單細胞生物")
     st.subheader("Please select a PDF file")
     pdf_file = st.selectbox("PDF file", ["docs/1.pdf", "docs/2.pdf"])
     st.subheader("Please input a keyword")
