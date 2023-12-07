@@ -80,8 +80,6 @@ if __name__ == "__main__":
         )
     
     st.title("BDS HW3a - 隋中彧")
-    st.write("AI Table 1")
-    st.write("AI Table 2")
     st.subheader("Please select a PDF file")
     pdf_file = st.selectbox("PDF file", ["docs/1.pdf", "docs/2.pdf"])
     st.subheader("Please input a keyword")
