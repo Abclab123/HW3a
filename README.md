@@ -22,6 +22,15 @@ Create an artificial intelligence that searches in which table in the given pdf 
 
 **the hole table with desired information in it**
 
+#### Demo
+![Alt text](image.png)
+
+#### Flow
+![image](./BDS_HW3a.drawio.png)
+
+#### Run
+`streamlit run main.py`
+
 #### Example
 
 The given pdf file:  
