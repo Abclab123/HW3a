@@ -22,6 +22,14 @@ Create an artificial intelligence that searches in which table in the given pdf 
 
 **the hole table with desired information in it**
 
+### Demo
+
+![image](./images/UI.png)
+
+### Flow
+
+![image](./images/flow.png)
+
 #### Example
 
 The given pdf file:  
@@ -55,3 +63,13 @@ Output:
 
 [Document 1](https://docs.google.com/document/d/1Di5oVYhUF6p-zj2y0DEBBeTvhC91KhX8/edit?usp=sharing&ouid=107784913306655694785&rtpof=true&sd=true)
 [Document 2](https://docs.google.com/document/d/1HiZrgIyvwY8Fi4eLS0QGUkkycngtD6XJ/edit?usp=sharing&ouid=107784913306655694785&rtpof=true&sd=true)
+
+## Run
+```bash
+streamlit run main.py
+```
+
+## Flow
+
+## Demo
+
