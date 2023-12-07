@@ -40,7 +40,6 @@ class cosine_sim:
 
 def main(keyword, pdf_files):
     pdf_parser = pdf2text()
-    #texts = pdf_parser(pdf_file[ 0 ])
 
     vector_parser = text2vector()
     cosine_parser = cosine_sim()
