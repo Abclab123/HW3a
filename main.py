@@ -57,7 +57,6 @@ def main(keyword, pdf_files):
                 with open('docs/temp.pdf', "wb") as f:
                     f.write(pdf_file[1].getvalue())
                 tables = camelot.read_pdf('docs/temp.pdf', pages="all")
-                #tables = camelot.read_pdf(pdf_file, pages='all')
                 max_sim_df = tables[ i ].df
     return max_sim_df
 
