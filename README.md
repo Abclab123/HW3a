@@ -12,7 +12,9 @@ conda activate docint
 conda install -c conda-forge ghostscript
 pip install -r requirements.txt
 ```
+## How to excute
 
+python3 -m streamlit run ./main.py
 ## Target
 
 Create an artificial intelligence that searches in which table in the given pdf files has the desired information.  
