@@ -1,8 +1,11 @@
 # Stage-A Document Intelligence
-
+土木所碩一, R12521530, 游文歆, Branch '27' , on hw3a sheet
 ## Flow Diagram
 
 ![Flow Diagram](images/HW3a.drawio.png)
+
+## Basic Introduction 
+This tool is crafted to extract tables from PDF documents, receive query keywords, and efficiently search for the most relevant table to display on the screen.
 
 ## Installation
 
