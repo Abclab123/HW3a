@@ -4,14 +4,12 @@ B11902014 高浩鈞
 # Stage-A Document Intelligence
 
 ## ReadMe!
-```bash!
 Loading to the UI page may take at most 15 seconds.
 I have modified line 4 of streamlit-script.py under Anaconda3\envs\docint\Scripts
 Original: 
 from streamlit.cli import main
 Modified:
-from streamlit.**web.**cli import main
-```
+from streamlit.**web**.cli import main
 
 ## Installation
 
