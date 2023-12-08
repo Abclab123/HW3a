@@ -1,5 +1,17 @@
 # Stage-A Document Intelligence
 
+## Student Info.
+r10921a20 周宥名
+## flow diagram
+![flow diagram](./images/flow%20diagram.png)
+## UI
+![UI](./images/UI.png)
+## Steps
+1. Put the PDF files under 'docs' folder
+2. $ streamlit run [$PATH/main.py]
+3. Input Keyword
+4. Search all PDF files for result table
+
 ## Installation
 
 ```bash
