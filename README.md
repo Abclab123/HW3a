@@ -1,5 +1,23 @@
 # Stage-A Document Intelligence
 
+## HW3a Info
+
+### Student
+
+R11922093 蔡奇夆
+
+### Run
+
+```bash
+# environment
+virtualenv venv
+source venv/bin/activate
+pip3 install -r requirements.txt
+
+# run
+streamlit run main.py
+```
+
 ## Installation
 
 ```bash
@@ -11,7 +29,7 @@ pip install -r requirements.txt
 
 ## Target
 
-Create an artificial intelligence that searches in which table in the given pdf files has the desired information.  
+Create an artificial intelligence that searches in which table in the given pdf files has the desired information.
 
 #### Input
 
@@ -24,9 +42,9 @@ Create an artificial intelligence that searches in which table in the given pdf 
 
 #### Example
 
-The given pdf file:  
+The given pdf file:
 ![image](https://github.com/Stage-A/Document-Intelligence/blob/main/images/example1.png)
-Search query:  
+Search query:
 
 ```commandline
 非監督式學習的應用
