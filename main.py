@@ -77,12 +77,12 @@ def get_table(keyword, pdf_file):
 def main():
     #UI
     st.set_page_config(
-        page_title="Education Table Search AI",
-        page_icon="🧙🏽‍♂️",
+        page_title="🌟 Magical Table Explorer",
+        page_icon="🧙🏽‍♂️📚✨",
         layout="centered",
         initial_sidebar_state="expanded",
     )
-    st.title("Education Table Search AI🧙🏽‍♂️")
+    st.title("📚✨ Welcome to the Enchanted Table Explorer 🧙🏽‍♂️")
     #PDF Title
     st.write("PDF 1: 機器學習")
     st.write("PDF 2: 動植物細胞")
@@ -97,12 +97,12 @@ def main():
     option = st.selectbox("", options=list(pdf_names.keys()), format_func=format_func)
     pdf_file = pdf_files[option]
 
-    st.subheader("✍🏿Input a keyword: ")
+    st.subheader("🕵️‍♂️ Enter the Magic Word:  ")
     keyword = st.text_input("")
-    serch = st.button("🔎Search")
+    search = st.button("🚀 Cast the Spell!")
 
-    if serch or (pdf_file and keyword):
-        with st.spinner('Searching🔄🔄🔄'):
+    if search or (pdf_file and keyword):
+        with st.spinner('Searching🔍🔍🔍'):
             title, table = get_table(keyword, pdf_file)
             st.subheader(title)
             st.dataframe(table)
