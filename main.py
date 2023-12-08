@@ -3,6 +3,8 @@ from numpy import dot, argmax
 from numpy.linalg import norm
 from sentence_transformers import SentenceTransformer
 import streamlit as st
+from sklearn.metrics.pairwise import cosine_similarity
+import numpy as np
 
 class pdf2text:
     def __init__(self):
@@ -34,17 +36,18 @@ class text2vector:
     def __call__(self, text):
         return self.model.encode(text, convert_to_tensor=False)
 
+
 class cosine_sim:
     def __init__(self):
         pass
 
     def __call__(self, vec_table, vec_keyword):
-        return dot(vec_table, vec_keyword) / (norm(vec_table) * norm(vec_keyword))
+        return cosine_similarity(np.atleast_2d(vec_table), np.atleast_2d(vec_keyword))
 
 def search(keywords, pdf_files):
     st.session_state.null = None
     if pdf_files == "" or keywords == "":
-        st.session_state.null = "PDF or Keywords are null"
+        st.session_state.null = "Please upload the PDF files or input the Keywords."
         return
     
     pdf_parser = pdf2text()
@@ -62,7 +65,7 @@ def search(keywords, pdf_files):
     return titles[idx], dfs[idx]
 
 if __name__ == "__main__":
-    st.title("Hw3a - Document Intelligence")
+    st.title("HW3a")
     st.subheader("R12922201 梁修維")
     st.divider()
 
