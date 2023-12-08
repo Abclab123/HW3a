@@ -15,6 +15,7 @@ pip install -r requirements.txt
 ## How to excute
 ```bash
 python3 -m streamlit run ./main.py
+```
 ## Target
 
 Create an artificial intelligence that searches in which table in the given pdf files has the desired information.  
