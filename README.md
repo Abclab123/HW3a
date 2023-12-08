@@ -11,7 +11,15 @@ pip install -r requirements.txt
 
 ## Target
 
-Create an artificial intelligence that searches in which table in the given pdf files has the desired information.  
+Create an artificial intelligence that searches in which table in the given pdf files has the desired information. 
+
+#### Usage
+
+```shell
+$ streamlit run main.py
+```
+
+And open [http://localhost:8501/](http://localhost:8501/) with your browser.
 
 #### Input
 
@@ -21,6 +29,14 @@ Create an artificial intelligence that searches in which table in the given pdf 
 #### Output
 
 **the hole table with desired information in it**
+
+#### Screenshot
+
+![image](screenshot.png)
+
+#### Flowchart
+
+![image](flowchart.jpg)
 
 #### Example
 
