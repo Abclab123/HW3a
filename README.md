@@ -1,4 +1,16 @@
+## Student Info
+B11902014 高浩鈞
+
 # Stage-A Document Intelligence
+
+## ReadMe!
+```bash!
+I have modified line 4 of streamlit-script.py under Anaconda3\envs\docint\Scripts
+Original: 
+from streamlit.cli import main
+Modified:
+from streamlit.**web.**cli import main
+```
 
 ## Installation
 
@@ -7,11 +19,23 @@ conda create -n docint python=3.11
 conda activate docint
 conda install -c conda-forge ghostscript
 pip install -r requirements.txt
+----------------------------------------
+Used: 
+conda install -c conda-forge jieba
+conda install -c conda-forge streamlit
+conda install -c anaconda scikit-learn
+----------------------------------------
+May Used:
+conda install -c conda-forge backports.tempfile 
 ```
+
+## Flowchart
+![BDS_HW3a flowchart](https://hackmd.io/_uploads/rkmD4hlLa.png)
+
 
 ## Target
 
-Create an artificial intelligence that searches in which table in the given pdf files has the desired information.  
+An artificial intelligence that searches in which table in the given pdf file has the desired information.  
 
 #### Input
 
@@ -20,7 +44,10 @@ Create an artificial intelligence that searches in which table in the given pdf 
 
 #### Output
 
-**the hole table with desired information in it**
+**the hole table with desired information in it**      
+
+#### Run the System
+streamlit run main.py    
 
 #### Example
 
