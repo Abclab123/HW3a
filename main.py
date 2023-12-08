@@ -12,7 +12,7 @@ class StreamlitUI:
 
     def start(self):
         st.title("BDS hw3a")
-        st.header("B09902134 鄭鴻鈞")
+        st.header("B09902112 沈建宇")
         uploaded_file = self.pdf_uploader(self.tmp_file)
         if not uploaded_file:
             st.text("Please upload a pdf file")
