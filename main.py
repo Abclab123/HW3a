@@ -43,7 +43,7 @@ class pdf2text:
 class text2vector:
     def __init__(self):
         # Load the SentenceTransformer model
-        self.model = SentenceTransformer("distiluse-base-multilingual-cased-v1")
+        self.model = SentenceTransformer("distiluse-base-multilingual-cased-v2")
 
     def __call__(self, text):
         # Convert the input text to a vector
