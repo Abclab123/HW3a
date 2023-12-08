@@ -66,6 +66,8 @@ class text2vector:
             f.write(bytes)
 
     def __call__(self, text):
+        pass
+    
 class pdf2text:
     def __init__(self):
         pass
