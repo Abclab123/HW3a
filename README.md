@@ -13,7 +13,7 @@ conda install -c conda-forge ghostscript
 pip install -r requirements.txt
 ```
 ## How to excute
-
+```bash
 python3 -m streamlit run ./main.py
 ## Target
 
