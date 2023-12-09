@@ -3,10 +3,15 @@ import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import streamlit as st
+import tempfile
+
 
 class pdf2text:
     def __call__(self, pdf_file):
-        tables = camelot.read_pdf(pdf_file, pages="all")
+        with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmpfile:
+            tmpfile.write(pdf_file.read())
+            tmpfile_path = tmpfile.name
+        tables = camelot.read_pdf(tmpfile_path, pages="all")
         texts = []
         for table in tables:
             texts.append(table.df.to_string())
@@ -28,6 +33,7 @@ class cosine_sim:
 
 def analyze_pdf(keyword, pdf_file):
     pdf_parser = pdf2text()
+    #st.write(pdf_file)
     tables_text = pdf_parser(pdf_file)
     
     vectorizer = text2vector()
