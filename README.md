@@ -1,5 +1,16 @@
 # Stage-A Document Intelligence
 
+## Run
+```bash
+streamlit run main.py 
+```
+
+## UI
+![image](https://github.com/Abclab123/HW3a/blob/121/images/UI.png)
+
+## Flow Chart
+![image](https://github.com/Abclab123/HW3a/blob/121/images/FlowChart.png)
+
 ## Installation
 
 ```bash
