@@ -63,3 +63,5 @@ def main(keyword, pdf_file):
 if __name__ == "__main__":
     # UI()
     UI("Enter Keyword Here")
+    
+# streamlit run main.py
